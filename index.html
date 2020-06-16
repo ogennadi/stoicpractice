@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        p, dt {
+            font-weight: bold;
+        }
+
+        dl,
+        dd {
+            font-size: .9rem;
+        }
+
+        dd {
+            margin-bottom: 1em;
+        }
+    </style>
+
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        function showTodaysDate(jday) {
+            $("h1").text(jday);
+        }
+
+        function showTodaysVirtue(jday) {
+            const day = Math.floor(jday) % 4;
+
+            for (let i = 0; i < 4; i++) {
+                if (i !== day) {
+                    $("#" + i).hide();
+                }
+            }
+        }
+
+        $(function () {
+            let jday = ((Date.now() / 86400000) + 2440587.5).toFixed(2);
+
+            showTodaysDate(jday);
+            showTodaysVirtue(jday);
+        })
+    </script>
+</head>
+
+<body>
+<h1></h1>
+<div id="0">
+    <h2>Courage</h2>
+    <dl>
+        <dt>Endurance</dt>
+        <dd>Ability to endure hardship.</dd>
+
+        <dt>Confidence</dt>
+        <dd>The state or quality of being confident in oneself.</dd>
+
+        <dt>High-mindedness</dt>
+        <dd>Given to idealism.</dd>
+
+        <dt>Cheerfulness</dt>
+        <dd>Noticeably happy and optimistic.</dd>
+
+        <dt>Industriousness</dt>
+        <dd>Steady application; careful work involving long-term effort.</dd>
+    </dl>
+</div>
+
+<div id="1">
+    <h2> Wisdom</h2>
+    <dl>
+        <dt>Good sense</dt>
+        <dd>common sense</dd>
+
+        <dt>Good calculation</dt>
+        <dd>The action of calculating or estimating something</dd>
+
+        <dt>Quick-wittedness</dt>
+        <dd>Mentally keen and alert.</dd>
+
+        <dt>Discretion</dt>
+        <dd>The quality of being discreet or circumspect.</dd>
+
+        <dt>Resourcefulness</dt>
+        <dd>the ability to cope with difficult situations, or unusual problems</dd>
+    </dl>
+</div>
+
+<div id="2">
+    <h2>Justice</h2>
+    <dl>
+        <dt>Piety</dt>
+        <dd>The virtue which admonishes us to do our duty to our country or our parents or other blood relations
+
+        <dt>Honesty</dt>
+        <dd>Scrupulous with regard to telling the truth; not given to swindling, lying, or fraud
+
+        <dt>Equity
+        <dd>Fairness, impartiality, or justice as determined in light of "natural law" or "natural right".
+
+        <dt>Fair dealing
+        <dd>an insurance company breaches its duty of good faith and fair dealing if it intentionally denies, fails to
+            process or pay a claim without a reasonable basis. Further, [t]he carrier has an obligation to immediately
+            conduct an adequate investigation, act reasonably in evaluating the claim, and act promptly in paying a
+            legitimate claim. It should do nothing that jeopardizes the insured's security under the policy. It should
+            not
+            force an insured to go through needless adversarial hoops to achieve its rights under the policy. It cannot
+            lowball claims or delay claims hoping that the insured will settle for less. Equal consideration of the
+            insured
+            requires more than that
+    </dl>
+</div>
+
+<div id="3">
+    <h2>Moderation</h2>
+    <dl>
+        <dt>Good discipline
+        <dd>activity, exercise, or a regimen that develops or improves a skill
+
+        <dt>Seemliness
+        <dd>appropriateness of conduct or behavior
+
+        <dt>Modesty
+        <dd>Not bragging or boasting about oneself or one's achievements
+
+        <dt>Self-control
+        <dd>The ability to control one's desires and impulses
+    </dl>
+</div>
+
+</body>
+</html>
